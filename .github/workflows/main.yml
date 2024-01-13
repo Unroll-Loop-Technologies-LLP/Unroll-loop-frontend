@@ -1,4 +1,4 @@
-name: Deploy netlify site
+name: Deploy to netlify site
 
 on:
   push:

@@ -24,7 +24,7 @@ function CustomNavbar() {
                             className="h-8 w-8 object-contain"
                             alt="Logo"
                         /> */}
-                        <span className="ml-2 text-xl font-bold text-gray-800">MyBrand</span>
+                        <span className="ml-2 text-xl font-bold text-gray-800">Unrool-Loop</span>
                     </div>
                     <div className="md:hidden">
                         {/* Add responsive menu icon here */}

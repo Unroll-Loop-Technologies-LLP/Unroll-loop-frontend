@@ -23,7 +23,7 @@ function Services(props) {
                 />
               </div>
               <div className="text-gray-800 text-xl font-semibold leading-7 self-stretch mt-6">
-                Community
+                Hybrid App Dev
               </div>
               <div className="text-gray-600 text-base leading-6 self-stretch mt-2.5">
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -41,7 +41,7 @@ function Services(props) {
                 />
               </div>
               <div className="text-gray-800 text-xl font-semibold leading-7 self-stretch mt-6">
-                Members-Only Podcast
+                AI Research
               </div>
               <div className="text-gray-600 text-base leading-6 self-stretch mt-2.5">
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -59,7 +59,7 @@ function Services(props) {
                 />
               </div>
               <div className="text-gray-800 text-xl font-semibold leading-7 self-stretch mt-6">
-                Expert Advice
+                ML Data sets
               </div>
               <div className="text-gray-600 text-base leading-6 self-stretch mt-2.5">
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -81,7 +81,7 @@ function Services(props) {
                 />
               </div>
               <div className="text-gray-800 text-xl font-semibold leading-7 self-stretch mt-6">
-                Community
+                IT buisness consulting
               </div>
               <div className="text-gray-600 text-base leading-6 self-stretch mt-2.5">
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -99,7 +99,7 @@ function Services(props) {
                 />
               </div>
               <div className="text-gray-800 text-xl font-semibold leading-7 self-stretch mt-6">
-                Members-Only Podcast
+                Digital Security
               </div>
               <div className="text-gray-600 text-base leading-6 self-stretch mt-2.5">
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -117,7 +117,7 @@ function Services(props) {
                 />
               </div>
               <div className="text-gray-800 text-xl font-semibold leading-7 self-stretch mt-6">
-                Expert Advice
+                Web3 and SEO
               </div>
               <div className="text-gray-600 text-base leading-6 self-stretch mt-2.5">
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco

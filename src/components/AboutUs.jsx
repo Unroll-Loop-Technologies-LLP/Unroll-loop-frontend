@@ -1,15 +1,20 @@
-import * as React from "react";
+import AIML from "../assets/ai-ml.jpg";
+import DigitalSecurity from "../assets/digital-security.jpg";
+import FUllStack from "../assets/full-stack.jpg";
 
-function MyComponent(props) {
+function MyComponent() {
   return (
-    <span className="flex flex-col items-stretch px-5">
+    <span className="flex flex-col items-stretch px-5 mb-10">
       <div className="text-slate-900 text-center text-4xl leading-10 self-center whitespace-nowrap">
         Our Expertise
       </div>
       <div className="max-w-screen-sm text-gray-500 text-center text-sm leading-5 self-center mt-5 max-md:max-w-full">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam.
+        At Unroll Loop, we bring a wealth of experience and a forward-thinking
+        approach to IT consulting. Our team of seasoned professionals is
+        dedicated to providing comprehensive solutions that propel your business
+        into the digital future. With a focus on excellence, innovation, and
+        client satisfaction, we stand as your trusted partner in navigating the
+        complexities of the digital landscape
       </div>
       <div className="w-full mt-6 max-md:max-w-full">
         <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
@@ -17,21 +22,17 @@ function MyComponent(props) {
             <div className="items-stretch flex grow flex-col rounded-3xl max-md:mt-3">
               <img
                 loading="lazy"
-                srcSet="..."
-                className="aspect-[0.82] object-contain object-center w-full overflow-hidden"
+                srcSet={AIML}
+                className="aspect-[0.7] object-contain object-center w-full overflow-hidden"
               />
               <span className="items-stretch flex flex-col mt-3 px-2">
-                {/* <div className="text-slate-500 text-xs font-medium leading-4 whitespace-nowrap">
-                  Biohacker & Health Expert
-                </div> */}
                 <div className="text-slate-900 text-lg font-semibold leading-6 whitespace-nowrap mt-1.5">
-                  AI/ML
+                  AI/ML Expert
                 </div>
                 <div className="text-gray-600 text-sm leading-6 mt-1.5">
-                  I believe in sustainable wellness from the inside out. What�s
-                  that mean? It�s simple: Train not for the singular pursuit of
-                  a six pack or toned legs, but to live your longest,
-                  healthiest, happiest life possible.
+                  Leveraging the power of Artificial Intelligence and Machine
+                  Learning to drive innovation and intelligent solutions for
+                  businesses.
                 </div>
               </span>
             </div>
@@ -40,21 +41,17 @@ function MyComponent(props) {
             <div className="justify-center items-stretch flex grow flex-col rounded-3xl max-md:mt-3">
               <img
                 loading="lazy"
-                srcSet="..."
-                className="aspect-[0.82] object-contain object-center w-full overflow-hidden"
+                srcSet={FUllStack}
+                className="aspect-[0.7] object-contain object-center w-full overflow-hidden"
               />
               <span className="items-stretch flex flex-col mt-3 px-2">
-                {/* <div className="text-slate-500 text-xs font-medium leading-4 whitespace-nowrap">
-                  Integrative Medicine Expert
-                </div> */}
                 <div className="text-slate-900 text-lg font-semibold leading-6 whitespace-nowrap mt-1.5">
-                  Full Stack Dev
+                  Full Stack Developer
                 </div>
                 <div className="text-gray-600 text-sm leading-6 mt-1.5">
-                  The incredible union of breath and movement through yoga
-                  provides endless possibility in our lives and in our
-                  relationships. Yoga creates the space between our reality and
-                  how we choose to respond.
+                  Crafting seamless and scalable web applications through
+                  expertise in both front-end and back-end development
+                  technologies.
                 </div>
               </span>
             </div>
@@ -63,27 +60,25 @@ function MyComponent(props) {
             <div className="items-stretch flex grow flex-col rounded-3xl max-md:mt-3">
               <img
                 loading="lazy"
-                srcSet="..."
-                className="aspect-[0.82] object-contain object-center w-full overflow-hidden"
+                srcSet={DigitalSecurity}
+                className="aspect-[0.7] object-contain object-center w-full overflow-hidden"
               />
               <span className="items-stretch flex flex-col mt-3 px-2">
-                {/* <div className="text-slate-500 text-xs font-medium leading-4 whitespace-nowrap">
-                  Neuroscientist & Biohacker
-                </div> */}
                 <div className="text-slate-900 text-lg font-semibold leading-6 whitespace-nowrap mt-1.5">
-                  Digital Security
+                  Digital Security Expert
                 </div>
                 <div className="text-gray-600 text-sm leading-6 mt-1.5">
-                  Residing at the intersection of neuroscience and athleticism,
-                  I provide a fresh perspective on achieving peak performance
-                  using evidence-based tools and methods.
+                  Ensuring the utmost protection for your digital assets through
+                  cutting-edge security measures and robust cybersecurity
+                  strategies.
                 </div>
               </span>
             </div>
           </div>
         </div>
       </div>
-      <div className="text-gray-600 text-base leading-7 mt-8 max-md:max-w-full">
+
+      {/* <div className="text-gray-600 text-base leading-7 mt-8 max-md:max-w-full">
         Unroll Loop Technologies LLP is a prominent technology solutions
         provider offering a comprehensive range of services to businesses. The
         company is committed to driving innovation and empowerment in the
@@ -99,7 +94,7 @@ function MyComponent(props) {
         that enhance efficiency, foster innovation, and fortify resilience. As a
         trusted partner, Unroll Loop Technologies LLP empowers businesses to
         thrive in the digital age.
-      </div>
+      </div> */}
     </span>
   );
 }

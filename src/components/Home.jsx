@@ -1,4 +1,5 @@
 import heroImage from "../assets/hero-section-image.jpg";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -22,7 +23,10 @@ function Home() {
               legacy of innovation, integrity, and social responsibility.
             </div>
             <div className="flex gap-5 mt-10 max-md:max-w-full max-md:flex-wrap">
-              <button className="flex items-center text-white text-base font-medium leading-6 bg-amber-500 px-6 py-4 rounded-[100px] max-md:px-5">
+              <Link
+                to="/contact"
+                className="flex items-center text-white text-base font-medium leading-6 bg-amber-500 px-6 py-4 rounded-[100px] max-md:px-5"
+              >
                 Get Started
                 <img
                   loading="lazy"
@@ -30,7 +34,7 @@ function Home() {
                   className="aspect-square object-contain object-center w-5 ml-2 overflow-hidden shrink-0 max-w-full"
                   alt="Icon"
                 />
-              </button>
+              </Link>
             </div>
           </span>
         </div>

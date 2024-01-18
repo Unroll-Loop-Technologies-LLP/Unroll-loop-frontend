@@ -27,7 +27,7 @@ function Home() {
                 to="/contact"
                 className="flex items-center text-white text-base font-medium leading-6 bg-amber-500 px-6 py-4 rounded-[100px] max-md:px-5"
               >
-                Get Started
+                Get Started &#8377;1000/-
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/a0a6792b52c93f60003e338388f28ee3f29b7c7d917cdf1e286a0ffc0c321cf2?"

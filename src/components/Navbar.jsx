@@ -71,17 +71,15 @@ function CustomNavbar() {
 
     <nav className="bg-white shadow-md w-full">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-2">
           {/* Logo and Text in the same div */}
           <div className="flex items-center">
             <img
               src={UnrollLoopLogo}
               alt="Unroll Loop Logo"
-              className="h-8 w-auto"
+              className="h-16 w-auto"
             />
-            <span className="ml-2 text-xl font-bold text-gray-800">
-              Unroll-Loop
-            </span>
+    
           </div>
           <div className="md:hidden">
             {/* Hamburger icon and mobile menu */}

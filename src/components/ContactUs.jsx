@@ -1,10 +1,33 @@
-import contactImage from '../assets/contactus.jpeg';
+import { useState } from "react";
+import axios from "axios";
+import contactImage from "../assets/contactus.jpeg";
+
 function ContactUs() {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const contactHandler = async () => {
+    try {
+      const response = await axios.post(
+        "https://unroll-loop-backend.onrender.com/send-email",
+        {
+          to: "unrollloop@gmail.com", // Replace with the recipient's email
+          subject: "Contact Form Submission",
+          text: `Email: ${email}\n\nMessage: ${message}`,
+        }
+      );
+
+      console.log(response.data);
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
+  };
+
   return (
     <section className="text-gray-600 body-font relative">
       <div className="absolute inset-0 bg-gray-300">
         <img
-        src={contactImage}
+          src={contactImage}
           alt="image"
           className="h-full md:h-64 lg:h-full object-cover w-full"
         />
@@ -25,6 +48,8 @@ function ContactUs() {
               type="email"
               id="email"
               name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
               aria-required
               className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
@@ -40,20 +65,28 @@ function ContactUs() {
             <textarea
               id="message"
               name="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               required
               aria-required
               className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
             ></textarea>
           </div>
-          <button className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+          <button
+            onClick={contactHandler}
+            className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+          >
             Submit
           </button>
-          <div className="text-black   font-medium mt-4">Address:</div>
+          <div className="text-black font-medium mt-4">Address:</div>
           <div className="text-gray-800">Unroll Loop Technologies LLP</div>
           <div className="text-gray-800">Sagara, Karnataka, India - 577401</div>
-          <a className="text-gray-800 no-underline font-semibold" href="mailto:contact@unrollloop.com">contact@unrollloop.com</a>
-
-          {/* <p className="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p> */}
+          <a
+            className="text-gray-800 no-underline font-semibold"
+            href="mailto:contact@unrollloop.com"
+          >
+            contact@unrollloop.com
+          </a>
         </div>
       </div>
     </section>

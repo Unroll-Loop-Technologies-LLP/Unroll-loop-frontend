@@ -2,6 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import contactImage from "../assets/contactus.jpeg";
 import LoadingVideo from "../assets/loading.mp4";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function ContactUs() {
   const [email, setEmail] = useState("");
@@ -11,6 +13,13 @@ function ContactUs() {
   const contactHandler = async () => {
     try {
       setLoading(true);
+
+      // Validate email format
+      if (!isValidEmail(email)) {
+        toast.error("Please enter a valid email address");
+        return;
+      }
+
       const response = await axios.post(
         "https://unroll-loop-backend.onrender.com/send-email",
         {
@@ -21,11 +30,23 @@ function ContactUs() {
       );
 
       console.log(response.data);
+
+      // Display success toast
+      toast.success("Email sent successfully!");
     } catch (error) {
       console.error("Error sending email:", error);
+
+      // Display error toast
+      toast.error("Error sending email. Please try again later.");
     } finally {
       setLoading(false);
     }
+  };
+
+  const isValidEmail = (email) => {
+    // Email validation regex (basic format check)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   };
 
   return (
@@ -38,6 +59,7 @@ function ContactUs() {
         />
       </div>
       <div className="container px-5 py-24 mx-auto flex relative">
+        <ToastContainer />
         {loading && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 z-20">
             <video

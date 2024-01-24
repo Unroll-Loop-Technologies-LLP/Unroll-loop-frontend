@@ -1,13 +1,16 @@
 import { useState } from "react";
 import axios from "axios";
 import contactImage from "../assets/contactus.jpeg";
+import LoadingVideo from "../assets/loading.mp4";
 
 function ContactUs() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const contactHandler = async () => {
     try {
+      setLoading(true);
       const response = await axios.post(
         "https://unroll-loop-backend.onrender.com/send-email",
         {
@@ -20,6 +23,8 @@ function ContactUs() {
       console.log(response.data);
     } catch (error) {
       console.error("Error sending email:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -32,7 +37,18 @@ function ContactUs() {
           className="h-full md:h-64 lg:h-full object-cover w-full"
         />
       </div>
-      <div className="container px-5 py-24 mx-auto flex">
+      <div className="container px-5 py-24 mx-auto flex relative">
+        {loading && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 z-20">
+            <video
+              src={LoadingVideo}
+              autoPlay
+              loop
+              className="w-32 h-32"
+              alt="Loading"
+            />
+          </div>
+        )}
         <div className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
           <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
             Contact Us
@@ -75,8 +91,9 @@ function ContactUs() {
           <button
             onClick={contactHandler}
             className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            disabled={loading}
           >
-            Submit
+            {loading ? "Sending..." : "Submit"}
           </button>
           <div className="text-black font-medium mt-4">Address:</div>
           <div className="text-gray-800">Unroll Loop Technologies LLP</div>

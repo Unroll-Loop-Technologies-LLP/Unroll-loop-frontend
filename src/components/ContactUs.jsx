@@ -128,7 +128,7 @@ function ContactUs() {
           </a>
         </div>
       </div>
-      <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_NUiFyWWceHYnCF" async> </script> </form>
+      
     </section>
   );
 }

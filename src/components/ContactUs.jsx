@@ -126,6 +126,9 @@ function ContactUs() {
           >
             contact@unrollloop.com
           </a>
+          <a className="text-gray-800 no-underline font-semibold"
+            href="https://rzp.io/l/unrollloop"> Please pay consultation fee using this link. 
+          </a>
         </div>
       </div>
       
